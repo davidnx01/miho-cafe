@@ -1,0 +1,343 @@
+<!doctype html><html lang="sk"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Miho cafe · kaviareň na Mariánskom námestí v Žiline — neoficiálny návrh</title>
+<meta name="description" content="Neoficiálny návrh webu kaviarne Miho cafe, Mariánske námestie 24/157, Žilina. Ukážka od webdavid.sk.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400;0,500;0,700;1,400&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#E6E5E0; --print:#F5F4F0; --ink:#1A1917; --mute:#55534E;
+  --film:#141312; --edge:#C9A35B; --grease:#C8392B; --oak:#D5B584;
+  --line:rgba(26,25,23,.18);
+  --hole:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='10'%3E%3Crect x='5' y='.5' width='12' height='9' rx='2' fill='%23E6E5E0'/%3E%3C/svg%3E");
+  --mono:'Sometype Mono',ui-monospace,Menlo,Consolas,monospace;
+  --wide:'Syncopate','Arial Black',Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.62 var(--mono);font-variant-numeric:tabular-nums}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--grease);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.wide{font-family:var(--wide);font-weight:700;text-transform:uppercase;letter-spacing:.02em;line-height:1.08;margin:0;text-wrap:balance}
+.lbl{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin:0}
+.lbl b{color:var(--grease);font-weight:500}
+
+/* upozornenie */
+.demo{background:var(--film);color:#E9E4D6;font-size:12.5px;line-height:1.45;padding:9px 32px;text-align:center;letter-spacing:.02em}
+.demo strong{color:var(--edge);font-weight:500}
+
+/* hlavička */
+.top{border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:28px;min-height:76px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.brand img{width:46px;height:46px;border-radius:50%}
+.brand span{font-family:var(--wide);font-weight:700;font-size:17px;letter-spacing:.14em}
+.top nav{display:flex;gap:26px;margin-left:auto;font-size:13px;text-transform:uppercase;letter-spacing:.12em}
+.top nav a,.tel{text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .2s}
+.top nav a:hover,.tel:hover{background-size:100% 1px}
+.tel{font-weight:500;font-size:15px;padding:6px 0}
+
+/* hero */
+.hero{padding:54px 0 0}
+.hero__grid{display:grid;grid-template-columns:7fr 5fr;gap:48px;align-items:end}
+.hero h1{text-wrap:wrap;font-size:clamp(30px,4.6vw,58px);margin-top:18px;max-width:11.5em}
+.hero h1 em{font-style:normal;color:var(--grease)}
+.quote{margin:0 0 22px;font-size:15px;line-height:1.6;padding-left:16px;border-left:2px solid var(--ink)}
+.quote cite{display:block;font-style:normal;font-size:12px;color:var(--mute);margin-top:6px;letter-spacing:.06em}
+.acts{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;font:500 14px var(--mono);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1.5px solid var(--ink);transition:background-color .2s,color .2s}
+.btn--red{background:var(--grease);border-color:var(--grease);color:#fff}
+.btn--red:hover{background:#A92E22;border-color:#A92E22}
+.btn--line:hover{background:var(--ink);color:var(--paper)}
+.facts{display:flex;flex-wrap:wrap;gap:6px 22px;margin:22px 0 0;padding:0;list-style:none;font-size:13px;color:var(--mute)}
+.facts b{color:var(--ink);font-weight:700;font-size:15px}
+
+/* kontaktný hárok */
+.sheet{list-style:none;margin:44px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);row-gap:22px}
+.fr{position:relative}
+.neg{position:relative;padding:29px 9px 38px;background:var(--hole) 0 7px/22px 10px repeat-x,var(--hole) 0 calc(100% - 7px)/22px 10px repeat-x,var(--film)}
+.neg img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.neg::after{content:attr(data-n) "\2003MIHO CAFE\2003" attr(data-n) "A";position:absolute;left:12px;bottom:19px;font-size:9.5px;line-height:1;letter-spacing:.22em;color:var(--edge)}
+.mark{position:absolute;inset:6px -10px 12px -10px;width:calc(100% + 20px);height:calc(100% - 18px);overflow:visible;pointer-events:none}
+.mark path{fill:none;stroke:var(--grease);stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;opacity:.93}
+.tick{position:absolute;right:-4px;top:12px;width:62px;height:50px;overflow:visible}
+.tick path{fill:none;stroke:var(--grease);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.note{margin:10px 12px 0 0;font-size:12.5px;line-height:1.45;color:var(--mute)}
+.note b{font-weight:500;color:var(--ink)}
+.note.sel{color:var(--grease)}
+.note.sel b{color:var(--grease)}
+
+/* káva — tmavý blok */
+.dark{background:var(--film);color:#ECE9E1;margin-top:84px;padding:84px 0 92px;position:relative}
+.dark::before,.dark::after{content:"";position:absolute;left:0;right:0;height:10px;background:var(--hole) 0 0/22px 10px repeat-x}
+.dark::before{top:14px}.dark::after{bottom:14px}
+.dark .lbl{color:#A9A395}
+.dark .lbl b{color:#E8705F}
+.kava{display:grid;grid-template-columns:5fr 6fr;gap:64px;align-items:center}
+.print{background:var(--print);padding:14px 14px 0;color:var(--ink)}
+.print figcaption{font-size:12px;letter-spacing:.06em;padding:11px 0 13px;color:var(--mute);display:flex;justify-content:space-between;gap:12px}
+.print figcaption b{font-weight:500;color:var(--ink)}
+.kava h2{font-size:clamp(28px,3.6vw,46px);margin:16px 0 22px;color:#F3EFE6}
+.kava p{margin:0 0 18px;max-width:34em}
+.kava__row{display:grid;grid-template-columns:200px 1fr;gap:26px;align-items:start;margin-top:34px}
+.slip{border:1.5px dashed rgba(236,233,225,.45);padding:20px 22px}
+.slip h3{font:700 13px var(--mono);letter-spacing:.16em;text-transform:uppercase;margin:0 0 10px;color:var(--edge)}
+.slip p{font-size:14px;margin:0;color:#CFCAC0}
+
+/* dizajn */
+.diz{padding:96px 0 0}
+.diz__grid{display:grid;grid-template-columns:8fr 4fr;gap:48px;align-items:end}
+.crop{position:relative}
+.crop i{position:absolute;width:34px;height:34px;border:0 solid var(--grease)}
+.crop i:nth-child(1){top:-12px;left:-12px;border-width:4px 0 0 4px}
+.crop i:nth-child(2){top:-12px;right:-12px;border-width:4px 4px 0 0}
+.crop i:nth-child(3){bottom:-12px;left:-12px;border-width:0 0 4px 4px}
+.crop i:nth-child(4){bottom:-12px;right:-12px;border-width:0 4px 4px 0}
+.crop img{width:100%}
+.diz h2{font-size:clamp(26px,3.2vw,40px);margin:16px 0 20px}
+.diz p{margin:0 0 16px}
+.small{font-size:13px;color:var(--mute)}
+
+/* winefest + hodnotenia */
+.wf{padding:110px 0 0}
+.wf__grid{display:grid;grid-template-columns:5fr 3fr 4fr;gap:48px;align-items:center}
+.wf h2{font-size:clamp(24px,2.8vw,36px);margin:16px 0 20px}
+.wf blockquote{margin:0;font-size:17px;line-height:1.55}
+.wf blockquote::before{content:"„"}
+.wf blockquote::after{content:"“"}
+.wf .print{padding:10px 10px 0}
+.score{border-left:1px solid var(--line);padding-left:36px;display:grid;gap:26px}
+.score p{margin:0;font-size:13px;color:var(--mute);line-height:1.45}
+.score strong{display:block;font-family:var(--wide);font-weight:700;font-size:46px;line-height:1;color:var(--ink);letter-spacing:.01em;margin-bottom:6px}
+
+/* kontakt */
+.kon{padding:110px 0 110px}
+.kon__grid{display:grid;grid-template-columns:auto 5fr 5fr;gap:56px;align-items:start;border-top:2px solid var(--ink);padding-top:40px}
+.kon .wrap{padding-top:0}
+.kon__logo{width:132px;height:132px;border-radius:50%}
+.kon h2{font-size:clamp(24px,2.6vw,34px);margin:0 0 24px}
+dl{margin:0;display:grid;grid-template-columns:110px 1fr;gap:10px 16px;font-size:15px}
+dt{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);padding-top:3px}
+dd{margin:0}
+dd a{text-decoration-thickness:1px;text-underline-offset:3px}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;padding:9px 0;border-bottom:1px solid var(--line);font-weight:400}
+td{text-align:right}
+tr[data-today] th,tr[data-today] td{font-weight:700}
+tr[data-today] th::after{content:" · dnes";color:var(--grease);font-weight:500;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.overit{margin:14px 0 0;font-size:12.5px;color:var(--mute)}
+.overit b{color:var(--grease);font-weight:500}
+
+/* päta */
+.foot{background:var(--film);color:#D8D3C6;position:relative;padding:44px 0 46px;font-size:13px}
+.foot::before,.foot::after{content:"";position:absolute;left:0;right:0;height:10px;background:var(--hole) 0 0/22px 10px repeat-x}
+.foot::before{top:10px}.foot::after{bottom:10px}
+.foot .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;justify-content:space-between}
+.foot strong{color:var(--edge);font-weight:500;letter-spacing:.12em;text-transform:uppercase;font-size:12px}
+.foot a{color:#EDE8DB}
+
+.bar{display:none}
+@media (hover:hover){.neg{overflow:hidden}.neg img{transition:transform .5s cubic-bezier(.2,.7,.3,1)}.fr:hover .neg img{transform:scale(1.045)}}
+
+@media (max-width:980px){
+  .hero__grid,.kava,.diz__grid{grid-template-columns:1fr;gap:34px}
+  .wf__grid{grid-template-columns:1fr 1fr;gap:34px}
+  .wf__txt{grid-column:1/-1}
+  .kon__grid{grid-template-columns:1fr 1fr}
+  .kon__logo{display:none}
+  .top nav{display:none}
+  .tel{margin-left:auto}
+}
+@media (max-width:640px){
+  body{font-size:15px;padding-bottom:calc(64px + env(safe-area-inset-bottom))}
+  .wrap{padding:0 18px}
+  .demo{padding:8px 18px;font-size:12px}
+  .top .wrap{min-height:64px;gap:12px}
+  .brand img{width:38px;height:38px}
+  .brand span{font-size:14px}
+  .tel{display:none}
+  .hero{padding-top:34px}
+  .hero h1{text-wrap:wrap;font-size:clamp(25px,7.4vw,32px);margin-top:14px}
+  .sheet{grid-template-columns:1fr 1fr;margin-top:32px}
+  .mark{inset:6px -6px 12px -6px;width:calc(100% + 12px)}
+  .note{font-size:11.5px;margin-right:6px}
+  .dark{margin-top:60px;padding:62px 0 66px}
+  .kava__row{grid-template-columns:1fr;gap:20px}
+  .kava__row .print{max-width:220px}
+  .diz{padding-top:70px}
+  .wf{padding-top:78px}
+  .wf__grid{grid-template-columns:1fr}
+  .score{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:26px;grid-template-columns:1fr 1fr;gap:20px}
+  .score strong{font-size:34px}
+  .kon{padding:78px 0 70px}
+  .kon__grid{grid-template-columns:1fr;gap:40px}
+  dl{grid-template-columns:96px 1fr;font-size:14.5px}
+  dd{overflow-wrap:anywhere}
+  .foot .wrap{flex-direction:column;align-items:flex-start}
+  .bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--paper);border-top:1px solid var(--line);padding:8px 12px calc(8px + env(safe-area-inset-bottom));gap:8px}
+  .bar a{min-height:48px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="demo" role="note"><strong>Neoficiálny návrh</strong> — nie je to oficiálny web podniku · ukážka od webdavid.sk, objednávky ani rezervácie tu nefungujú</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#" aria-label="Miho cafe — úvod"><img src="assets/logo.webp" width="240" height="240" alt="Logo Miho cafe"><span>MIHO CAFE</span></a>
+    <nav aria-label="Sekcie">
+      <a href="#kava">Káva</a><a href="#priestor">Priestor</a><a href="#kontakt">Hodiny a&nbsp;kontakt</a>
+    </nav>
+    <a class="tel" href="tel:+421902622645">0902 622 645</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div class="hero__grid">
+      <div>
+        <p class="lbl"><b>Hárok č. 1</b> · Mariánske námestie 24 · Žilina</p>
+        <h1 id="h1" class="wide">Káva a&nbsp;dizajn <em>v&nbsp;centre</em> Žiliny</h1>
+      </div>
+      <div>
+        <blockquote class="quote">„Pripravili sme si pre Vás koncept výbornej kávy a&nbsp;jedinečného dizajnu v&nbsp;priamom centre Žiliny“<cite>— Miho cafe na Facebooku</cite></blockquote>
+        <div class="acts">
+          <a class="btn btn--red" href="tel:+421902622645">Zavolať 0902 622 645</a>
+          <a class="btn btn--line" href="https://www.instagram.com/mihocafe/" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <ul class="facts">
+      <li><b>4,9</b> z&nbsp;5 · 81 hodnotení na Google</li>
+      <li><b>100 %</b> odporúča · 19 recenzií na Facebooku</li>
+      <li><b>Mariánske nám. 24/157</b> · 010 01 Žilina</li>
+    </ul>
+
+    <ol class="sheet" aria-label="Kontaktný hárok — fotky z Miho cafe">
+      <li class="fr">
+        <div class="neg" data-n="1"><img src="assets/interier.webp" width="1300" height="867" alt="Interiér Miho cafe s klenbami, svetlými stolmi a čiernymi stoličkami" fetchpriority="high">
+          <svg class="mark" viewBox="0 0 200 140" preserveAspectRatio="none" aria-hidden="true"><path d="M44 12C104-2 186 6 194 58c8 54-58 78-118 76C22 132 2 104 6 70 10 34 46 12 112 8"/></svg></div>
+        <p class="note sel"><b>1</b> · priestor ↓ zväčšiť</p>
+      </li>
+      <li class="fr">
+        <div class="neg" data-n="2"><img src="assets/latte.webp" width="1000" height="1000" alt="Latte v žltej šálke s latte art">
+          <svg class="mark" viewBox="0 0 200 140" preserveAspectRatio="none" aria-hidden="true"><path d="M150 14C84-4 10 12 6 66c-4 52 70 72 126 66 48-6 66-34 62-66C188 26 150 8 88 10"/></svg></div>
+        <p class="note sel"><b>2</b> · káva ↓ zväčšiť</p>
+      </li>
+      <li class="fr">
+        <div class="neg" data-n="3"><img src="assets/zrnka.webp" width="540" height="540" alt="Zrnká kávy vo vrecku"></div>
+        <p class="note"><b>3</b> · zrnká</p>
+      </li>
+      <li class="fr">
+        <div class="neg" data-n="4"><img src="assets/syrova-misa.webp" width="1100" height="927" alt="Syrová misa s hroznom, olivami, syrmi a salámou">
+          <svg class="tick" viewBox="0 0 56 46" aria-hidden="true"><path d="M4 26 18 40 52 4"/></svg></div>
+        <p class="note sel"><b>4</b> · syrová misa, Winefest</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="dark" id="kava" aria-labelledby="h-kava">
+  <div class="wrap kava">
+    <figure class="print" style="margin:0">
+      <img src="assets/latte.webp" width="1000" height="1000" alt="Latte v žltej šálke na drevenom stole, vedľa otvorená kniha" loading="lazy">
+      <figcaption><b>Rám 2 · zväčšenina</b><span>foto: FB Miho cafe</span></figcaption>
+    </figure>
+    <div>
+      <p class="lbl"><b>Polovica konceptu</b> · káva</p>
+      <h2 id="h-kava" class="wide">Výborná káva</h2>
+      <p>Tak to o&nbsp;sebe píšu sami: „koncept výbornej kávy“. Kaviareň nájdete priamo na Mariánskom námestí 24 a&nbsp;novinky sledujte na Instagrame <a href="https://www.instagram.com/mihocafe/" rel="noopener">@mihocafe</a>.</p>
+      <div class="kava__row">
+        <figure class="print" style="margin:0;padding:8px 8px 0">
+          <img src="assets/paka.webp" width="540" height="540" alt="Páka espresso kávovaru s namletou kávou" loading="lazy">
+          <figcaption style="padding:8px 0 9px"><b>Rám 5</b><span>páka</span></figcaption>
+        </figure>
+        <div class="slip">
+          <h3>Nápojový lístok</h3>
+          <p>Ukážka návrhu: sem príde aktuálny nápojový lístok Miho cafe s&nbsp;cenami — doplníme ho podľa lístka v&nbsp;kaviarni.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="diz" id="priestor" aria-labelledby="h-diz">
+  <div class="wrap diz__grid">
+    <div class="crop"><i></i><i></i><i></i><i></i><img src="assets/interier.webp" width="1300" height="867" alt="Interiér Miho cafe — klenbový strop, drevené stoly a lavica pri stene" loading="lazy"></div>
+    <div>
+      <p class="lbl"><b>Rám 1 · orezať tu</b> · priestor</p>
+      <h2 id="h-diz" class="wide">Jedinečný dizajn</h2>
+      <p>Druhá polovica ich konceptu: „jedinečného dizajnu v&nbsp;priamom centre Žiliny“.</p>
+      <p class="small">Mariánske námestie 24/157, Žilina. Fotka interiéru je z&nbsp;Facebooku kaviarne.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wf" aria-labelledby="h-wf">
+  <div class="wrap wf__grid">
+    <div class="wf__txt">
+      <p class="lbl"><b>Rám 4</b> · Facebook, 8. 8. 2026</p>
+      <h2 id="h-wf" class="wide">Syrová misa na Winefest</h2>
+      <blockquote>Ako každý rok aj na dnešný Winefest sme si pre vás pripravili syrovú misu plnú dobrôt</blockquote>
+    </div>
+    <figure class="print" style="margin:0">
+      <img src="assets/syrova-misa.webp" width="1100" height="927" alt="Syrová misa na drevenom podnose s hroznom, olivami a salámou" loading="lazy">
+      <figcaption><b>Rám 4</b><span>Winefest</span></figcaption>
+    </figure>
+    <div class="score" aria-label="Hodnotenia">
+      <p><strong>4,9</strong>z&nbsp;5 na Google · 81 hodnotení</p>
+      <p><strong>100 %</strong>odporúča na Facebooku · 19 recenzií</p>
+    </div>
+  </div>
+</section>
+
+<section class="kon" id="kontakt" aria-labelledby="h-kon">
+  <div class="wrap"><div class="kon__grid">
+    <img class="kon__logo" src="assets/logo.webp" width="240" height="240" alt="" loading="lazy">
+    <div>
+      <h2 id="h-kon" class="wide">Kde nás nájdete</h2>
+      <dl>
+        <dt>Adresa</dt><dd>Mariánske námestie 24/157<br>010 01 Žilina<br><a href="https://www.google.com/maps/search/Miho+cafe+%C5%BDilina" rel="noopener">Otvoriť v&nbsp;Mapách Google</a></dd>
+        <dt>Telefón</dt><dd><a href="tel:+421902622645">0902 622 645</a></dd>
+        <dt>E-mail</dt><dd><a href="mailto:mihocafeza@gmail.com">mihocafeza@gmail.com</a></dd>
+        <dt>Instagram</dt><dd><a href="https://www.instagram.com/mihocafe/" rel="noopener">@mihocafe</a></dd>
+        <dt>Facebook</dt><dd><a href="https://www.facebook.com/mihocafe" rel="noopener">facebook.com/mihocafe</a></dd>
+      </dl>
+    </div>
+    <div>
+      <h2 class="wide">Hodiny</h2>
+      <table>
+        <tr data-day="1"><th>Pondelok</th><td>10:00–21:00</td></tr>
+        <tr data-day="2"><th>Utorok</th><td>10:00–21:00</td></tr>
+        <tr data-day="3"><th>Streda</th><td>10:00–21:00</td></tr>
+        <tr data-day="4"><th>Štvrtok</th><td>10:00–21:00</td></tr>
+        <tr data-day="5"><th>Piatok</th><td>10:00–01:00</td></tr>
+        <tr data-day="6"><th>Sobota</th><td>14:30–01:00</td></tr>
+        <tr data-day="0"><th>Nedeľa</th><td>neuvedené</td></tr>
+      </table>
+      <p class="overit"><b>Overiť:</b> hodiny podľa OpenStreetMap — pred návštevou si ich radšej potvrďte telefonicky.</p>
+    </div>
+  </div></div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <strong>Neoficiálny návrh webu · webdavid.sk · 2026</strong>
+    <span>Miho cafe · Mariánske námestie 24/157, Žilina · <a href="https://www.facebook.com/mihocafe" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/mihocafe/" rel="noopener">Instagram</a></span>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Rýchle akcie">
+  <a class="btn btn--red" href="tel:+421902622645">Zavolať</a>
+  <a class="btn btn--line" href="https://www.instagram.com/mihocafe/" rel="noopener">Instagram</a>
+</nav>
+
+<script>
+(function(){try{var d=new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/Bratislava",weekday:"short"}).format(new Date());var n={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[d];[].forEach.call(document.querySelectorAll('[data-day="'+n+'"]'),function(r){r.setAttribute("data-today","")})}catch(e){}})();
+</script>
